@@ -1,37 +1,77 @@
+# Project Setup Guide
 
-## How to run this project:
+Follow the steps below to set up and run this project.
 
-### For Frontend 
-Follow the below steps to run the project: 
-- Firstly clone or unzip the project folder.
-* Go to the frontend directory by using the following command ``` cd frontend ```.
-* * create a **.env.local** file in the backend root directory as the same level where the **package.json** is located and keep the following environment variables there:
-```
->>> Stepup firebase app and configure the environment
+---
 
-VITE_API_KEY="AIzaSyCXvDIC4MPrkaMdeg_O2iij88wLpfj3qBA"
-VITE_Auth_Domain="book-store-mern-app.firebaseapp.com"
-VITE_PROJECT_ID="book-store-mern-app"
-VITE_STORAGE_BUCKET="book-store-mern-app.appspot.com"
-VITE_MESSAGING_SENDERID= "205632822247"
-VITE_APPID="1:205632822247:web:b0db0ec66bf6de0bbb3b42"
-```
-+ Then run `` npm install `` commend to install node dependencies.
-- Finally, to run the project, use ``npm run dev`` command.
+## Frontend Setup
 
+### Steps to Run the Frontend:
+1. **Clone or unzip the project folder.**
+2. Navigate to the frontend directory:
+   ```sh
+   cd frontend
+   ```
+3. Create a `.env.local` file in the frontend root directory (at the same level as `package.json`) and add the following environment variables:
+   ```ini
+   # Set up Firebase app and configure the environment
+   VITE_API_KEY=
+   VITE_AUTH_DOMAIN=
+   VITE_PROJECT_ID=
+   VITE_STORAGE_BUCKET=
+   VITE_MESSAGING_SENDERID=
+   VITE_APPID=
+   ```
+4. Install dependencies:
+   ```sh
+   npm install
+   ```
+5. Start the frontend development server:
+   ```sh
+   npm run dev
+   ```
 
-### For Backend
-Follow the below steps to run the project: 
-- Firstly clone or unzip the project folder.
-* Go to the backend directory by using the following command ``` cd backend```.
-+ Then run `` npm install `` commend to install node dependencies.
-* create a **.env** file in the backend root directory as the same level where the **package.json** is located and keep the following environment variables there: 
-```
-DB_URL = "mongodb+srv://helpyourassistant:pqam0Mwv3Vwv8Off@cluster0.qc3bq.mongodb.net/book-store?retryWrites=true&w=majority&appName=Cluster0"
+---
 
-JWT_SECRET_KEY = 'bc992a20cb6706f741433686be814e3df45e57ea1c2fc85f9dbb0ef7df12308a669bfa7c976368ff32e32f6541480ce9ec1b122242f9b1257ab669026aeaf16'
+## Backend Setup
 
-Note: Please setup mongodb and change the MongoDB url and set your jwt secret key above.
-```
+### Steps to Run the Backend:
+1. **Clone or unzip the project folder.**
+2. Navigate to the backend directory:
+   ```sh
+   cd backend
+   ```
+3. Install dependencies:
+   ```sh
+   npm install
+   ```
+4. Create a `.env` file in the backend root directory (at the same level as `package.json`) and add the following environment variables:
+   ```ini
+   # MongoDB Connection String
+   DB_URL="your_mongodb_connection_url"
 
-- Finally, to run the project, use ``npm run start:dev`` command.
+   # JWT Secret Key
+   JWT_SECRET_KEY="your_jwt_secret_key"
+   ```
+   **Note:**
+   - Ensure MongoDB is set up and running.
+   - Replace `your_mongodb_connection_url` with your actual MongoDB connection string.
+   - Set your own secure `JWT_SECRET_KEY`.
+
+5. Start the backend development server:
+   ```sh
+   npm run start:dev
+   ```
+
+---
+
+## Additional Notes
+- Ensure Node.js and npm are installed on your system.
+- If you encounter issues, check for missing dependencies and install them using `npm install`.
+- Use a `.gitignore` file to exclude `.env` files from being pushed to version control.
+- Make sure your Firebase project is correctly configured before running the frontend.
+
+---
+
+This completes the setup process. Happy coding! 🚀
+
